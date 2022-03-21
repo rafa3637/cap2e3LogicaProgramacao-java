@@ -1,0 +1,45 @@
+/********************************************************************
+ *ELABORAR UM ALGORITMO QUE LEIS DOIS NÚMEROS INTEIROS E A OPERAÇÃO 
+ *ARITMÉTICA DESEJADA E CALCULAR A RESPOSTA ADEQUADA
+ ********************************************************************/
+
+package numerosInteiroseOperação;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int X1, X2, R;
+		char S;
+		System.out.print("Digite os Valores de X1 e X2: ");
+		X1 = sc.nextInt();
+		X2 = sc.nextInt();
+		
+		System.out.print("Digite o simbolo da operação: ");
+		S = sc.nextLine().charAt('+');
+		switch(S) {
+			case '+':
+				R = X1 + X2;
+				System.out.print("O resultado da adição é: " + R);
+				break;
+			case '-':
+				R = X1 - X2;
+				System.out.print("O resultado da subtração é: " + R);
+				break;
+			case '*':
+				R = X1 * X2;
+				System.out.print("O resultado da multiplicação é: " + R);
+				break;
+			case '/':
+				R = X1 / X2;
+				System.out.print("O resultado da Divisão é: " + R);
+				break;
+			default: System.out.print("Operação Ínvalida!!");
+		}
+		
+		sc.close();
+	}
+
+}
